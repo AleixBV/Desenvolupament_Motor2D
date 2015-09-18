@@ -3,6 +3,7 @@
 
 #include "j1Window.h"
 #include "j1Input.h"
+#include "j1Physfs.h"
 #include "j1Render.h"
 #include "j1Textures.h"
 #include "j1Audio.h"
@@ -17,6 +18,7 @@ j1App::j1App(int argc, char* args[]) : argc(argc), args(args)
 
 	input = new j1Input();
 	win = new j1Window();
+	physfs = new j1Physfs();
 	render = new j1Render();
 	tex = new j1Textures();
 	audio = new j1Audio();
@@ -26,6 +28,7 @@ j1App::j1App(int argc, char* args[]) : argc(argc), args(args)
 	// Reverse order of CleanUp
 	AddModule(input);
 	AddModule(win);
+	AddModule(physfs);
 	AddModule(tex);
 	AddModule(audio);
 	AddModule(scene);

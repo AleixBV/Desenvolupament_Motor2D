@@ -7,6 +7,7 @@
 // Modules
 class j1Window;
 class j1Input;
+class j1Physfs;
 class j1Render;
 class j1Textures;
 class j1Audio;
@@ -66,6 +67,7 @@ public:
 	// Modules
 	j1Window*			win;
 	j1Input*			input;
+	j1Physfs*			physfs;
 	j1Render*			render;
 	j1Textures*			tex;
 	j1Audio*			audio;
