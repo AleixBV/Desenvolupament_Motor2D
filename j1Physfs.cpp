@@ -10,6 +10,9 @@
 #pragma comment( lib, "PhysFS/libx86/physfs.lib" )
 
 
+j1Physfs::j1Physfs() : j1Module()
+{}
+
 // Destructor
 j1Physfs::~j1Physfs()
 {}
@@ -41,9 +44,9 @@ bool j1Physfs::CleanUp()
 
 
 
-SDL_RWops* j1Physfs::LoadFile(const char* file)
+/*SDL_RWops* j1Physfs::LoadFile(const char* file)
 {
 	//IMG_Load_RW(file);
 
 	//return true;
-}
+}*/

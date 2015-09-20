@@ -25,7 +25,7 @@ public:
 	
 
 	// Called for load files
-	SDL_RWops* LoadFile(const char* file);
+//	SDL_RWops* LoadFile(const char* file);
 };
 
 #endif
