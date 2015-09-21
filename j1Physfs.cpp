@@ -1,17 +1,10 @@
 #include "j1Physfs.h"
-#include "p2Log.h"
-
-
-#include "SDL/include/SDL.h"
-
-#include "SDL_image/include/SDL_image.h"
-#pragma comment( lib, "SDL_image/libx86/SDL2_image.lib" )
-#include "PhysFS/include/physfs.h"
-#pragma comment( lib, "PhysFS/libx86/physfs.lib" )
 
 
 j1Physfs::j1Physfs() : j1Module()
-{}
+{
+	
+}
 
 // Destructor
 j1Physfs::~j1Physfs()
@@ -44,9 +37,9 @@ bool j1Physfs::CleanUp()
 
 
 
-/*SDL_RWops* j1Physfs::LoadFile(const char* file)
+bool j1Physfs::LoadFile(SDL_RWops* file)
 {
-	//IMG_Load_RW(file);
+	IMG_Load_RW(file, NULL);
 
-	//return true;
-}*/
+	return true;
+}

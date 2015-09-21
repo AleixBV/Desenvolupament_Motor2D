@@ -2,6 +2,15 @@
 #define _PHYSFS_
 
 #include "j1Module.h"
+#include "p2Log.h"
+
+
+#include "SDL/include/SDL.h"
+
+#include "SDL_image/include/SDL_image.h"
+#pragma comment( lib, "SDL_image/libx86/SDL2_image.lib" )
+#include "PhysFS/include/physfs.h"
+#pragma comment( lib, "PhysFS/libx86/physfs.lib" )
 
 
 class j1Physfs : public j1Module
@@ -25,7 +34,7 @@ public:
 	
 
 	// Called for load files
-//	SDL_RWops* LoadFile(const char* file);
+	bool LoadFile(SDL_RWops* file);
 };
 
 #endif
