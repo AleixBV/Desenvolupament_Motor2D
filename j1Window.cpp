@@ -24,6 +24,7 @@ bool j1Window::Awake()
 	LOG("Init SDL window & surface");
 	bool ret = true;
 
+
 	if(SDL_Init(SDL_INIT_VIDEO) < 0)
 	{
 		LOG("SDL_VIDEO could not initialize! SDL_Error: %s\n", SDL_GetError());
@@ -33,26 +34,28 @@ bool j1Window::Awake()
 	{
 		//Create window
 		Uint32 flags = SDL_WINDOW_SHOWN;
-		width = SCREEN_WIDTH;
-		height = SCREEN_HEIGHT;
-		scale = SCALE;
+		width = App->config.child("window").child("width").value;
+		height = App->config.child("window").child("weight").value;
+		scale = App->config.child("window").child("scale").value;
 
-		if(R_FULLSCREEN == true)
+		//App->config.child("scale").child_value;
+
+		if (App->config.child("window").child("fullscreen").child_value())
 		{
 			flags |= SDL_WINDOW_FULLSCREEN;
 		}
 
-		if(R_BORDERLESS == true)
+		if (App->config.child("window").child("borderless").child_value())
 		{
 			flags |= SDL_WINDOW_BORDERLESS;
 		}
 
-		if(R_RESIZABLE == true)
+		if (App->config.child("window").child("resizable").child_value())
 		{
 			flags |= SDL_WINDOW_RESIZABLE;
 		}
 
-		if(R_FULLSCR_WINDOWED == true)
+		if (App->config.child("window").child("fullscreen_windowed").child_value())
 		{
 			flags |= SDL_WINDOW_FULLSCREEN_DESKTOP;
 		}
