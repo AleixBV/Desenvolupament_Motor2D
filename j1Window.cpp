@@ -34,9 +34,9 @@ bool j1Window::Awake()
 	{
 		//Create window
 		Uint32 flags = SDL_WINDOW_SHOWN;
-		width = App->config.child("window").child("width").value;
-		height = App->config.child("window").child("weight").value;
-		scale = App->config.child("window").child("scale").value;
+		width = App->config.child("window").child("width").attribute("width").as_uint();
+		height = App->config.child("window").child("weight").attribute("weight").as_uint();
+		scale = App->config.child("window").child("scale").attribute("scale").as_int();
 
 		//App->config.child("scale").child_value;
 
