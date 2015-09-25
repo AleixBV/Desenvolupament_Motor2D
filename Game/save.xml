@@ -1,0 +1,20 @@
+<!-- Config file for the game -->
+
+<save>
+  <app>
+    
+  </app>
+	
+  <renderer>
+    <camera x="10" y="100"/>
+  </renderer>
+
+  <window>
+    
+  </window>
+
+  <file_system>
+
+  </file_system>
+
+</save>

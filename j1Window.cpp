@@ -34,8 +34,8 @@ bool j1Window::Awake(pugi::xml_node window_config)
 	{
 		//Create window
 		Uint32 flags = SDL_WINDOW_SHOWN;
-		width = window_config.attribute("width").as_uint();
-		height = window_config.attribute("height").as_uint();
+		width = window_config.child("width").attribute("value").as_int(640);
+		height = window_config.child("height").attribute("value").as_int(480);
 
 		scale = window_config.child("scale").attribute("scale").as_int();
 		if (scale < 1)
